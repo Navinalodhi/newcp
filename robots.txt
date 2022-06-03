@@ -1,0 +1,6 @@
+User-agent: Googlebot-Image # The Google Images crawler
+Disallow: /images/ # Hide the images folder
+
+User-agent: *
+Disallow:
+

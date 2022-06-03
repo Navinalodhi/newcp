@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="Article description to make google serach access">
+		<link rel="shortcut icon" type="image/png" href="assets/images/logo/favicon.png"/>
+		<title>Article Website - Think,Smile,Explore your world.</title>
+		
+		<!--CSS files are linked here-->
+		<link rel="stylesheet" type="text/css" href="assets/css/main-sheet.css" >
+ 
+		<!-- REVOLUTION BANNER CSS SETTINGS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/revolution-slider.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato|BioRhyme:300|Rubik|Open+Sans" rel="stylesheet">
+	</head>
+
+
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="" >
+					<nav class="navbar navbar-default">
+					    <div class="navbar-header">
+					    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>                        
+							</button>
+					      	<a class="navbar-brand" href="/"><img src="assets/images/logo/article-logo.png" alt="article-logo" /></a>
+					    </div>
+					    <div class="collapse navbar-collapse" id="myNavbar">
+						    <ul class="nav navbar-nav navbar-right">
+								<!--<a href="https://app.engagespot.co/register" class="btn button-link caribbean-green" role="button">Sign Up</a>
+								<a href="https://app.engagespot.co" class="btn button-link rose-madder" role="button">Login</a>-->
+								<a href="" class="btn profile-button" role="button" ><img class="prof-class" src="assets/images/icons/user/profile_pic.png" alt="profile-picture" /></a>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li <?php if($page === 'home') echo 'class="clicked"';?><a href="index.php">Home</a></li>
+				  				<li <?php if($page === 'pricing') echo 'class="clicked"';?><a href="pricing.php">Link 1</a></li>
+				  				<li <?php if($page === 'features') echo 'class="clicked"';?><a href="features.php">Link 2</a></li>
+				  				<li><a href="https://engagespot.co/blog/">Blog</a></li>
+				  				<li <?php if($page === 'case_studies') echo 'class="clicked"';?><a href="case-studies.php">Reviews</a></li>
+				  				<li <?php if($page === 'contact') echo 'class="clicked"';?><a href="contact-page.php">Contact</a></li>
+						    </ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="art-sub-content">
+					<h3>Create Your Article</h3>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form">
+						<form id="contact_form" name="contact-form" method="post"  onsubmit="return validateForm()">
+		                    <!--<div id="name" class="gap">
+		                    <label id="name-label" for="name"> Article name : </label>
+		                    	<input id="name-field" type="text" placeholder="Article name" name="name" value="">
+		                    </div>-->
+		                    <div class="form-group">
+								<label class="label-light white-text" for="art_title">Article Title</label>
+								<input class="form-control" type="text" value="" name="art[title]" id="art_title"/>
+								<span class="help-block white-text">This feature is experimental and translations are not complete yet.</span>
+							</div>
+		                    <!--<div id="sh-desc" class="gap" >
+		                    	<label id="sh-desc-field-label" for="sh-desc-field"> Description : </label>
+		                    	<input id="sh-desc-field" type="text" class="form-control" aria-describedby="basic-addon1" placeholder="Give a short description here" required name="short-description" value="">
+		                    </div>-->
+		                   	<div class="form-group">
+								<label class="label-light white-text" for="art_desc">Description</label>
+								<textarea rows="5" class="form-control" maxlength="250" placeholder="Give a short description here" name="art[desc]" id="art_desc" required>
+								</textarea>
+								<span class="help-block white-text">Tell us about your article in fewer than 250 characters.</span>
+							</div>
+							<div class="form-group">
+								<label class="label-light white-text" for="art_category">Category</label>
+								<select class="select2" name="art[category]" id="art_category">
+									<option value="cat1">category 1</option>
+									<option value="cat2">category 2</option>
+									<option value="cat3">category 3</option>
+									<option value="cat4">category 4</option>
+									<option value="cat5">category 5</option>
+								</select>
+								<span class="help-block white-text">This feature is experimental and translations are not complete yet.</span>
+							</div>
+							<div class="form-group">
+								<label class="label-light white-text" for="art_type">Upload type</label>
+								<select class="select2" name="art[type]" id="art_type">
+									<option value="image">Image</option>
+									<option value="pdf">PDF</option>
+									<option value="video">video format</option>
+								</select>
+								<span class="help-block white-text">This feature is experimental and translations are not complete yet.</span>
+							</div>
+							<div class="form-group">
+								<label class="label-light white-text" for="art_file">Add File</label>
+								<input class="form-control" type="text" value="" name="art[file]" id="art_file"/>
+									<a class="btn js-choose-user-avatar-button browse">
+									Browse file...
+									</a>
+									<span class="avatar-file-name prepend-left-default js-avatar-filename white-text">No file chosen</span>
+							</div>
+							<div class="form-group">
+								<label class="label-light white-text" for="art_file">Add Thumbnail</label>
+								<input class="form-control" type="text" value="" name="art[file]" id="art_file"/>
+									<a class="btn js-choose-user-avatar-button browse">
+									Browse file...
+									</a>
+									<span class="avatar-file-name prepend-left-default js-avatar-filename white-text">No file chosen</span>
+									<span class="help-block white-text">For better presentation make the thumbnail in 314 *132 px format.</span>
+							</div>
+		                    <!--<div id="add-file gap" class="gap" >
+		                    	<label ld="file-label" for="add-file-field"> Add file : </label>
+		                    	<input id="add-file-field" type="text" placeholder="add article file" name="phone" value="">
+		                    	<button id="browse-btn" class="btn caribbean-green filled" type="submit" name="browse btn" value="search" >Browse ..</button>
+		                    </div>-->
+		                    <div id="privacy" class="gap">
+		                    	<label id="privacy-label" class="white-text" for="privacy"> Shows to : </label>
+		                    	<div class="show white-text">
+		                    		<input type="radio" name="public" value="public" checked>public
+		                    		<br>
+		                    		<input type="radio" name="class-group" value="private" >class group 
+		                    	</div>
+		                    </div>
+		                    <div class="gap">
+		                        <button id="send" class="btn caribbean-green filled" type="submit" name="submitform" value="send" >Send</button>
+		                    </div>
+		                    <div class="gap">
+		                        <div id="submit-info"></div>
+		                    </div>
+		                </form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer" id="footer" >
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 footer-left">
+						<img src="assets/images/logo/article-logo.png" alt="article-logo" />
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 categories">
+						<h6>Categories</h6>
+						<ul>
+							<li>Writings</li>
+							<li>Drawings</li>
+							<li>Biography</li>
+							<li>History</li>
+							<li>Novel</li>
+							<li>Stories</li>
+							<li>Short Stories</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 authors">
+						<h6>Authors</h6>
+						<ul>
+							<li>Krishnan H</li>
+							<li>Sarath M</li>
+							<li>Rijaz Aliyar</li>
+							<li>Sagar J</li>
+							<li>Naveen</li>
+							<li>Dineesh</li>
+							<li>JK</li>
+						</ul>  
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 social-links">
+						<h6>Social Links</h6>	  
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
